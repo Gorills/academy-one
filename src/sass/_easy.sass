@@ -1,0 +1,77 @@
+.easy
+  width: 100%
+  margin: 0 auto
+  // .easy__inner
+
+  &__inner
+    width: 100%
+    margin: 0 auto
+  // .easy__item
+
+  &__item
+    display: flex
+    align-items: center
+    position: relative
+    height: 610px
+    width: 100%
+    // .easy__item--one
+
+    &--one
+      justify-content: flex-end
+    // .easy__item--two
+
+    &--two
+      justify-content: flex-start
+      margin-top: -23px
+  // .easy__img
+
+  &__img
+    position: absolute
+    &--one
+      left: -100px
+    &--two
+      right: -100px
+
+  // .easy__wraper
+
+  &__wrapper
+    width: 100%
+    min-width: 544px
+    max-width: 544px
+    &--one
+      margin-left: 96px
+    &--two
+      margin-right: 96px
+  // .easy__title
+
+  &__title
+    font-size: 32px
+    margin-bottom: 33px
+  // .easy__desc
+
+  &__desc
+    margin-bottom: 38px
+    color: $fonts-color-light
+
+
+
+  // .easy__link
+
+  &__link
+    display: inline-block
+
+    color: $accent-color
+    &:hover
+      font-weight: 700
+
+
+
+  // .easy__arrow
+
+  &__arrow
+    margin-left: 8px
+    transition: $transition
+    &:hover
+      transform: rotate(180deg)
+
+

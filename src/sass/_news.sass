@@ -1,0 +1,76 @@
+.news
+  width: 100%
+  margin: 0 auto
+  padding: 152px 0 127px
+  // .news__inner
+
+  &__inner
+    width: 100%
+    margin: 0 auto
+  // .news__row
+
+  &__row
+    display: flex
+  // .news__item
+
+  &__item
+    display: flex
+  &__item + &__item
+    margin-top: 30px
+
+  &__left
+    margin-right: 30px
+    width: 100%
+    max-width: 555px
+
+  &__left-wrapper
+    position: relative
+    overflow: hidden
+    width: 100%
+    max-width: 555px
+    height: 285px
+    margin-bottom: 40px
+
+  &__left-img
+    @include img-center
+
+  &__left-title
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 24px
+    color: $accent-color
+  &__left-desc
+    color: $fonts-color-light
+    margin-bottom: 37px
+  &__left-link
+      display: block
+      color: $accent-color
+  // .news__wrapper
+
+  &__wrapper
+    width: 240px
+    height: 120px
+    margin-bottom: 20px
+    overflow: hidden
+    position: relative
+    margin-right: 30px
+
+  // .news__img
+
+  &__img
+    @include img-center
+  // .news__title
+
+  &__title
+    font-size: 18px
+    margin-bottom: 25px
+  // .news__desc
+
+  &__desc
+    color: $fonts-color-light
+  // .news__link
+
+  &__link
+    display: none
+
+

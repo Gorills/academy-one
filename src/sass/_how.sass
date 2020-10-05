@@ -1,0 +1,51 @@
+.how
+  width: 100%
+  margin: 0 auto
+  padding: 151px 0 127px
+  text-align: center
+  background-color: $background-color
+  // .how__inner
+
+  &__inner
+    width: 100%
+
+    margin: 0 auto
+
+  // .how__row
+
+  &__row
+    display: flex
+    justify-content: space-between
+    position: relative
+    z-index: 1
+    &::after
+      content: ''
+      height: 1px
+      border: 1px dotted #0f7bff
+      width: 70%
+      position: absolute
+      z-index: 1
+      left: 50%
+      transform: translateX(-50%)
+      top: 50px
+  // .how__item
+
+  &__item
+    text-align: center
+    width: 100%
+    max-width: 296px
+    position: relative
+    z-index: 2
+
+  // .how__title
+
+  &__title
+    font-weight: 500
+    font-size: 18px
+    color: $fonts-color
+    margin: 31px 0 29px
+
+  // .how__descr
+
+  &__descr
+    color: $fonts-color-light

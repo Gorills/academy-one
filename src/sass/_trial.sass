@@ -1,0 +1,50 @@
+.trial
+  width: 100%
+  margin: 0 auto
+  padding: 130px 0
+  background-color: $background-color
+  // .trial__inner
+
+  &__inner
+    width: 100%
+    max-width: 780px
+    margin: 0 auto
+    padding: 0 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  // .trial__wrapper
+
+  &__wrapper
+
+  // .trial__title
+
+  &__title
+    font-size: 29px
+    font-weight: 500
+    margin-bottom: 24px
+
+  // .trial__subtitle
+
+  &__subtitle
+    color: $fonts-color-light
+  // .trial__btn
+
+  &__btn
+    width: 263px
+    height: 76px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #ffffff
+    background-color: $accent-color
+    font-weight: 700
+    border-radius: 5px
+    img
+      margin-left: 10px
+      filter: brightness(500)
+      transition: $transition
+    &:hover, &:focus
+      background-color: darken($accent-color, 10%)
+      img
+        transform: rotate(360deg)

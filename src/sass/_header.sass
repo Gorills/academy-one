@@ -1,0 +1,71 @@
+.header
+  width: 100%
+  margin: 0 auto
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 2
+  // .header__inner
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  // .header__logo
+
+  &__logo
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $accent-color
+    color: #ffffff
+    font-size: 36px
+    font-weight: 700
+    height: 100px
+    width: 179px
+    border-radius: 0 0 22px 22px
+
+  // .header__wrapper
+
+  &__wrapper
+    display: flex
+    align-items: center
+  // .header__nav
+
+  &__nav
+
+  // .header__list
+
+  &__list
+    list-style: none
+    padding: 0
+  // .header__item
+
+  &__item
+    display: inline-block
+
+  &__item + &__item
+    margin-left: 20px
+  // .header__link
+
+
+  &__link
+    text-transform: uppercase
+    font-weight: 500
+    color: $fonts-color-light
+    transition: $transition
+    &:hover, &:focus
+      color: $accent-color
+
+    &--active
+      color: $accent-color
+  // .header__btn
+
+  &__btn
+    margin-left: 53px
+    text-transform: uppercase
+    background-color: $button-color
+    color: #ffffff
+    &:hover, &:focus
+      background-color: darken($button-color, 10%)
