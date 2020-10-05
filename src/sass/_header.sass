@@ -6,6 +6,16 @@
   left: 0
   right: 0
   z-index: 2
+  &--fixed
+    position: fixed
+    z-index: 9998
+    background-color: #fff
+    box-shadow: $box-shadow
+
+    .header__logo
+      height: 60px
+      border-radius: 0
+
   @media (max-width: 768px)
     transition: $transition
     position: fixed
