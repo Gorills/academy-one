@@ -13,10 +13,16 @@
     display: flex
     justify-content: space-between
     align-items: center
+    @media (max-width: 768px)
+      flex-direction: column
+      text-align: center
+
+
   // .trial__wrapper
 
   &__wrapper
-
+    @media (max-width: 768px)
+      margin-bottom: 40px
   // .trial__title
 
   &__title

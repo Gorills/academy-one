@@ -6,12 +6,29 @@
   left: 0
   right: 0
   z-index: 2
+
+  @media (max-width: 768px)
+    transition: $transition
+    position: fixed
+    top: 0
+    left: -200%
+    width: 100%
+    bottom: 0
+    background-color: $accent-color
+    z-index: 999
+    display: flex
+    align-items: center
+    &--active
+      left: 0
+
   // .header__inner
 
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
+    @media (max-width: 768px)
+      flex-direction: column
   // .header__logo
 
   &__logo
@@ -31,10 +48,15 @@
   &__wrapper
     display: flex
     align-items: center
+    @media (max-width: 768px)
+      flex-direction: column
+      text-align: center
+
   // .header__nav
 
   &__nav
-
+    @media (max-width: 768px)
+      margin-bottom: 40px
   // .header__list
 
   &__list
@@ -44,9 +66,15 @@
 
   &__item
     display: inline-block
+    @media (max-width: 768px)
+      display: block
+
 
   &__item + &__item
     margin-left: 20px
+    @media (max-width: 768px)
+      margin-left: 0
+      margin-top: 20px
   // .header__link
 
 
@@ -57,9 +85,25 @@
     transition: $transition
     &:hover, &:focus
       color: $accent-color
+    @media (max-width: 768px)
+      color: #ffffff
 
     &--active
       color: $accent-color
+      @media (max-width: 768px)
+        position: relative
+        color: #ffffff
+        &::after
+          content: ''
+          width: 50px
+          position: absolute
+          height: 1px
+          background-color: #fff
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          z-index: 9999
+
   // .header__btn
 
   &__btn
@@ -69,3 +113,5 @@
     color: #ffffff
     &:hover, &:focus
       background-color: darken($button-color, 10%)
+    @media (max-width: 768px)
+      margin-left: 0

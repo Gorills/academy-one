@@ -1,6 +1,7 @@
 .easy
   width: 100%
   margin: 0 auto
+  overflow: hidden
   // .easy__inner
 
   &__inner
@@ -14,10 +15,17 @@
     position: relative
     height: 610px
     width: 100%
+    @media (max-width: 567px)
+      flex-direction: column
+      height: auto
+      text-align: center
     // .easy__item--one
 
     &--one
       justify-content: flex-end
+      @media (max-width: 567px)
+        margin-bottom: 40px
+
     // .easy__item--two
 
     &--two
@@ -27,21 +35,48 @@
 
   &__img
     position: absolute
+    z-index: 1
+
+    @media (max-width: 567px)
+      position: relative
+      width: 100%
+
+      height: 100%
+      object-fit: cover
     &--one
       left: -100px
+      @media (max-width: 768px)
+        left: -250px
+      @media (max-width: 567px)
+        left: 0
     &--two
       right: -100px
-
+      @media (max-width: 768px)
+        right: -250px
+      @media (max-width: 567px)
+        right: 0
   // .easy__wraper
 
   &__wrapper
+    background-color: rgba(255, 255, 255, .8)
     width: 100%
     min-width: 544px
     max-width: 544px
+    padding: 20px
+    position: relative
+    z-index: 2
+    @media (max-width: 567px)
+      min-width: 100%
+
     &--one
-      margin-left: 96px
+      margin-left: 76px
+      @media (max-width: 567px)
+        margin: 0 auto
+
     &--two
-      margin-right: 96px
+      margin-right: 76px
+      @media (max-width: 567px)
+        margin: 0 auto
   // .easy__title
 
   &__title

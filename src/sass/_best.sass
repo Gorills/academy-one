@@ -1,6 +1,7 @@
 .best
   width: 100%
   height: 100vh
+  min-height: 567px
   // min-height: 1043px
   margin: 0 auto
   padding: 0 15px
@@ -19,13 +20,19 @@
     position: relative
     width: 100%
     max-width: 611px
+    z-index: 99
   // .best__title
   &__title
     font-size: 36px
     font-weight: 700
     margin-bottom: 32px
+    @media (max-width: 320px)
+      font-size: 26px
+
+
   // .best__descriptio
   &__description
+    color: $fonts-color-light
   // .best__btn-group
   &__btn-group
     margin-top: 50px
@@ -33,14 +40,36 @@
     justify-content: center
     .btn + .btn
       margin-left: 20px
+  &__btn
+    background: $background-color
+
   // .best__img
   &__img-wrapper
     line-height: .7
     margin: 0 auto
     position: relative
     bottom: 0
+    @media (max-height: 950px)
+      height: 300px
+
+
+
+
+    @media (max-height: 750px)
+      height: 250px
+
+    @media (max-height: 670px)
+      height: 200px
+
+
   &__img
     height: 100%
+    width: 100%
+    object-fit: contain
+    object-position: bottom
+
+
+
   // .best__link
   &__link
     line-height: 1

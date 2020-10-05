@@ -20,11 +20,15 @@
   // .footer__form
 
   &__form
-
+    display: flex
+    justify-content: center
+    @media (max-width: 480px)
+      padding: 0 15px
   // .footer__input
 
   &__input
-    width: 392px
+    width: 100%
+    max-width: 392px
     height: 60px
     padding-left: 25px
     color: #ffffff
@@ -55,22 +59,35 @@
     align-items: center
     justify-content: space-between
     padding: 41px 0
+    @media (max-width: 768px)
+      flex-direction: column
+      text-align: center
+
   // .footer__copy
 
   &__copy
-
+    @media (max-width: 768px)
+      margin-bottom: 20px
   // .footer__list
 
   &__list
     list-style: none
     margin: 0
     padding: 0
+    @media (max-width: 768px)
+      margin-bottom: 20px
   // .footer__item
 
   &__item
     display: inline-block
+    @media (max-width: 380px)
+      display: block
+
   &__item + &__item
     margin-left: 40px
+    @media (max-width: 380px)
+      margin-left: 0
+      margin-top: 20px
 
   // .footer__link
 
