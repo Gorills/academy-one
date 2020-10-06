@@ -1,0 +1,110 @@
+
+.trusted
+
+
+  .trusted__slide + trusted__slide
+    margin-left: 30px
+
+  label, a
+    /*при наведении на стрелки или переключатели - курсор изменится*/
+    cursor: pointer
+
+
+  .all input
+    /*скрывает стандартные инпуты (чекбоксы) на странице*/
+    display: none
+
+
+  /*позиция изображения при активации переключателя*/
+  #switch1:checked ~ #slides .image
+    @media (max-width: 768px)
+      margin-left: 50%
+    @media (max-width: 480px)
+      margin-left: 550px
+
+    @media (max-width: 320px)
+      margin-left: 475px
+      
+
+  #switch2:checked ~ #slides .image
+    margin-left: -33%
+    margin-right: 33%
+    @media (max-width: 768px)
+      margin-left: -20px
+      margin-right: 20px
+
+
+  #switch3:checked ~ #slides .image
+    margin-left: -65%
+    margin-right: 65%
+
+
+  #controls /*положение блока всех управляющих элементов*/
+    margin: -25% 0 0 0
+    width: 100%
+    height: 90px
+
+
+  #active label
+    /*стиль отдельного переключателя*/
+    border-radius: 10px /*скругление углов*/
+    display: inline-block /*расположение в строку*/
+    width: 20px
+    height: 10px
+    background: #d4d4d4
+
+
+  #active /*расположение блока с переключателями*/
+    margin: 23% 0 0
+    @media (max-width: 992px)
+      text-align: center
+      margin-bottom: 20px
+
+
+  #active label:hover /*поведение чекбокса при наведении*/
+    background: #76c8ff
+    border-color: #777 !important /*выполнение в любом случае*/
+
+
+  /*цвет активного лейбла при активации чекбокса*/
+  #switch1:checked ~ #active label:nth-child(1),
+  #switch2:checked ~ #active label:nth-child(2),
+  #switch3:checked ~ #active label:nth-child(3)
+    background: #18a3dd
+    border-color: #18a3dd !important
+    width: 30px
+
+  #slides .image /*анимация пролистывания изображений*/
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000)
+
+  #controls label:hover /*прозрачность стрелок при наведении*/
+    opacity: 0.6
+
+  #controls label /*прозрачность стрелок при отводе курсора*/
+    transition: opacity 0.2s ease-out
+
+
+  .trusted__slide
+    padding: 44px 30px
+    background-color: #fff
+    width: 360px
+    min-width: 320px
+  .trusted__slide + .trusted__slide
+    margin-left: 30px
+
+
+
+#slides article
+  /*все изображения справа друг от доруга*/
+  width: 20%
+
+
+
+#slides .image
+  /*устанавливает общий размер блока с изображениями*/
+
+  display: flex
+  justify-content: center
+
+
+
